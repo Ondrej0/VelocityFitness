@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    box-sizing: border-box;
+  }
+  
+  /*Header and navingation bar */
+  
+  nav {
+    background-color: #FFC107;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav li {
+    height: 80px;
+    font-size: 20px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 20px;
+    margin: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #2C2C2C;
+    transition: 0.5s;
+  }
+  
+  nav a:hover {
+    transform: scale(1.1);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Logo media settings */
+  
+  @media (min-width: 500px) {
+    .smallLogo {
+      margin-right: auto;
+      font-weight: 800;
+      font-size: 35px;
+      height: 100%;
+      padding: 20px 50px;
+      margin-left: 70px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: #2C2C2C;
+      letter-spacing: -2px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .smallLogo {
+      margin-right: auto;
+      font-weight: bold;
+      font-size: 15px;
+      height: 100%;
+      padding: 0 10px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: #2C2C2C;
+      margin-left: 0px;
+      letter-spacing: 0;
+    }
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  /* Side bar */
+  .sidebar li:first-child {
+    height: 10%;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.541);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  @media (max-width: 1340px) {
+    .hideOnMobile {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+  /* Hero Section -------------------------------------------------------------------------------------*/
+  
+  .heroDiv {
+    width: 100%;
+    height: clamp(200px, 50vw, 600px);
+    background-image: url("images/classesHero.jpg"); /* Corrected path */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  
+  .heroDiv h1 {
+    color: #2C2C2C;
+    font-size: clamp(30px, 5vw, 90px);
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    transform: translateX(50%);
+  }
+  
+  .heroDiv h1 span{
+    font-weight: 100;
+    transform: translateY(-1000px);
+    
+  }
+  
+/* Description Para Section -------------------------------------------------------------------------------------*/

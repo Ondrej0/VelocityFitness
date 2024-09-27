@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;700&display=swap" rel="stylesheet">
+
+    <title>VelocityFitness Home Page</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Menu --------------------------------------------------------------------------------------------------------------- -->
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="30px"
+              viewBox="0 -960 960 960"
+              width="30px"
+              fill="#2C2C2C"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+              />
+            </svg>
+          </a>
+        </li>
+        <li><a href="#">HOME</a></li>
+        <li><a href="classes.html">CLASSES</a></li>
+        <li><a href="#">TRAINERS</a></li>
+        <li><a href="#">MEMBERSHIP</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+      <ul>
+        <li class="smallLogo">VELOCITYFITNESS</li>
+        <li class="hideOnMobile"><a href="#">HOME</a></li>
+        <li class="hideOnMobile"><a href="classes.html">CLASSES</a></li>
+        <li class="hideOnMobile"><a href="#">TRAINERS</a></li>
+        <li class="hideOnMobile"><a href="#">MEMBERSHIP</a></li>
+        <li class="hideOnMobile"><a href="#">CONTACT</a></li>
+        <li class="menu-button" onclick="showSidebar()">
+          <a
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="36px"
+              viewBox="0 -960 960 960"
+              width="36px"
+              fill="#000000"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+              />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section --------------------------------------------------------------------------------------------------------------- -->
+    <div class="heroDiv">
+      <h5>VELOCITYFITNESS</h5>
+      <h1>
+        TRAIN THE <br />
+        <span>FIGHTER IN YOU</span>
+      </h1>
+      <p>
+        Velocity Fitness is a leading martial arts and fitness club in Bristol
+        and the surrounding areas. With three locations, we are known for our
+        positive energy, rain or shine. Our foundation is built on experienced
+        and inspirational coaches. We offer martial arts, fitness, boxing,
+        personal training, and open gym sessions. We pride ourselves on
+        fostering an inclusive community. Our dedicated staff is committed to
+        helping you become the best version of yourself, improving your fitness,
+        lifestyle, and confidence.
+      </p>
+      <button>JOIN NOW</button>
+    </div>
+
+    <!-- Classes Section --------------------------------------------------------------------------------------------------------------- -->
+    <div class="classMain">
+      <div id="classHeads">
+        <h2>OUR CLASSES</h2>
+        <h3>DISCOVER OUR DIVERSE CLASS OFFERINGS</h3>
+      </div>
+      <div id="classPics">
+        <div class="classContainer">
+          <div id="martialArtsClass"  class="classTopCard"><p class="classTopText">MARTIAL ARTS</p></div>
+          <div class="classBottomCard"><p class="classBottomText">Unlock your potential with our martial arts classes, where discipline meets empowerment. Learn self-defense techniques, improve your focus, and build confidence under the guidance of experienced instructors. Whether you're a beginner or a seasoned practitioner, our classes offer a supportive environment to hone your skills and achieve mastery.</p><button class="classButton">READ MORE</button></div>
+        </div>
+        <div class="classContainer">
+          <div id="fitnessClass" class="classTopCard"><p class="classTopText">FITNESS</p></div>
+          <div class="classBottomCard"><p class="classBottomText">Boost your energy and strength with our comprehensive fitness classes, designed to challenge and inspire all levels. Our expert trainers guide you through high-intensity workouts and targeted exercises that enhance endurance, build muscle, and promote overall wellness. Join us to transform your body and ignite your passion for health.</p><button class="classButton">READ MORE</button></div>
+      
+        </div>
+        <div class="classContainer">
+          <div id="flexibleClass" class="classTopCard"><p class="classTopText">FLEXIBILTY</p></div>
+          <div class="classBottomCard"><p class="classBottomText">Enhance your range of motion and prevent injury with our flexibility classes. These amazing sessions focus on stretching and mobility exercises that improve posture, reduce tension, and increase your overall flexibility. Perfect for all fitness levels, our classes help you move more freely and feel revitalized in your daily activities.</p><button class="classButton">READ MORE</button></div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+
+    <!-- Trainers Section --------------------------------------------------------------------------------------------------------------- -->
+    <div class="trainerMain">
+      <div id="trainerHeads">
+        <h2>MEET YOUR TRAINERS</h2>
+        <h3>EMPOWERING YOU WITH EXPERT GUIDANCE</h3>
+      </div>
+      <div id="trainerPics">
+        <div class="trainerContainer">
+          <div id="JordanLee"  class="trainerTopCard"></div>
+          <div class="trainerBottomCard"><p class="trainerTopText">JORDAN LEE</p><p class="trainerBottomText">A skilled martial arts instructor with a focus on discipline and personal growth, helping students master techniques and build confidence.</p><button class="trainerButton">READ BIO</button></div>
+        </div>
+        <div class="trainerContainer">
+          <div id="AlexCarter" class="trainerTopCard"></div>
+          <div class="trainerBottomCard"><p class="trainerTopText">ALEX CARTER</p><p class="trainerBottomText">A versatile and energetic trainer known for their dynamic fitness sessions and motivational coaching style.</p><button class="trainerButton">READ BIO</button></div>
+      
+        </div>
+        <div class="trainerContainer">
+          <div id="RileyMorgan" class="trainerTopCard"></div>
+          <div class="trainerBottomCard"><p class="trainerTopText">RILEY MORGAN</p><p class="trainerBottomText">An experienced flexibility coach dedicated to enhancing mobility and promoting overall well-being through personalized stretching routines.</p><button class="trainerButton">READ BIO</button></div>
+          
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Testimonials Section --------------------------------------------------------------------------------------------------------------- -->
+    <div id="testBig">
+      <div id="testHeading">
+        <h1 id="tesMainHead">TESTIMONIALS</h1>
+        <h2 id="testSubHead">WHAT OUR MEMBERS SAY</h2>
+      </div>
+
+      <section class="container">
+        <button class="sliderButton" onclick="slideLeft()">&lt;</button>
+        <div class="testimonial tes1">
+          <div class="testi-contents">
+            <div class="slide">
+              <img src="images\testi1.jpg" alt="Testi 1 image" class="image" />
+              <p>
+                I've been a member of VelocityFitness for six months, and the
+                results are incredible! The trainers are highly knowledgeable
+                and always provide personalized workout plans that really push
+                me to my limits. The atmosphere is motivating, and the
+                state-of-the-art equipment ensures I have everything I need for
+                a great workout.
+              </p>
+              <img src="images\quote.png" class="quote-icon" />
+
+              <div class="details">
+                <span class="name">Marnia Lotter</span>
+                <span class="job">Trainer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial tes2">
+          <div class="testi-contents">
+            <div class="slide">
+              <img src="images\testi2.jpg" alt="Testi 1 image" class="image" />
+              <p>
+                VelocityFitness is hands down the best gym I've ever joined. The
+                classes are diverse and cater to all fitness levels, so there's
+                always something new to try. The community here is supportive
+                and welcoming, which makes working out a lot more fun. The
+                facilities are always clean, and the staff is incredibly
+                friendly and helpful. Since joining,
+              </p>
+              <img src="images\quote.png" class="quote-icon" />
+
+              <div class="details">
+                <span class="name">James L</span>
+                <span class="job">Instructor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial tes3">
+          <div class="testi-contents">
+            <div class="slide">
+              <img src="images\testi3.jpg" alt="Testi 1 image" class="image" />
+              <p>
+                As a busy professional, finding time for the gym was always a
+                challenge, but VelocityFitness has made it so much easier. Their
+                flexible hours and convenient location mean I can fit in a
+                workout before or after work without any hassle. The trainers
+                are fantastic, offering guidance and encouragement every step of
+                the way.
+              </p>
+              <img src="images\quote.png" class="quote-icon" />
+
+              <div class="details">
+                <span class="name">Emily R</span>
+                <span class="job">Manager</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="sliderButton" onclick="slideRight()">&gt;</button>
+      </section>
+    </div>
+
+    <!-- Free Pass Section --------------------------------------------------------------------------------------------------------------- -->
+    <div id="freeDayCard">
+      <h2>HAVE A <i>FREE</i> DAY ON US</h2>
+      <p>
+        Begin your fitness journey with this amazing offer! Use your pass to
+        access our gym, swimming, or group fitness classes*, and experience a
+        boost of energy and inspiration.
+      </p>
+      <button>TRY IT NOW</button>
+    </div>
+
+    <!-- Membership Section --------------------------------------------------------------------------------------------------------------- -->
+
+    <div id="memberShipSec">
+      <div class="memberHead">
+        <h1 class="memberMainHead">MEMBERSHIPS</h1>
+        <h2 class="memberSub">EXPLORE OUR MEMBERSHIP OPTIONS</h2>
+      </div>
+      <div class="memberContainer">
+        <div class="memberCard">
+          <h2 class="memberName">Basic Membership</h2>
+          <ul class="memberBenefits">
+            <li>
+              Access to gym facilities during regular hours.
+            </li>
+            <li>
+              No additional perks or specialized classes included.
+            </li>
+            <li>
+              Suitable for individuals who prefer a simple gym routine.
+            </li>
+          </ul>
+          <div class="priceContainer">
+            <h4 class="memberPPY">
+            PRICE PER YEAR
+            </h4>
+            <h3 class="meberPrice">
+              £149.99
+            </h3>
+          </div>
+          
+          <button class="joinButton">JOIN TODAY</button>
+        </div>
+        <div class="memberCard" id="premiumMember">
+          <h2 class="memberName">Premium <br/> Membership</h2>
+          <ul class="memberBenefits">
+            <li>
+              Includes access to gym facilities, swimming pool, and group fitness classes.
+            </li>
+            <li>
+              Additional benefits 
+            </li>
+            <li>
+              Ideal for members looking for a more comprehensive fitness experience.
+            </li>
+          </ul>
+          <div class="priceContainer">
+            <h4 class="memberPPY">
+            PRICE PER YEAR
+          </h4>
+          <h3 class="meberPrice">
+            £199.99
+          </h3>
+          </div>
+          
+          <button class="joinButton">JOIN TODAY</button>
+        </div>
+        <div class="memberCard">
+          <h2 class="memberName">VIP Membership</h2>
+          <ul class="memberBenefits">
+            <li>
+              All benefits of Premium Membership.
+            </li>
+            <li>
+              Exclusive access to VIP events or workshops.
+            </li>
+            <li>
+              Designed for members seeking a premium and personalized fitness experience.
+            </li>
+          </ul>
+          <div class="priceContainer">
+            <h4 class="memberPPY">
+            PRICE PER YEAR
+            </h4>
+            <h3 class="meberPrice">
+              £249.99
+            </h3>
+          </div>
+          
+          <button class="joinButton">JOIN TODAY</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Contact Section --------------------------------------------------------------------------------------------------------------- -->
+<div id="contactUs">
+  <h2>Contact Us</h2>
+  <p>
+    Wish to enquire about admissions, syllabus, or anything else? You can walk in during office hours, give us a call or simply submit the form here.
+  </p>
+  <button>CONTACT US</button>
+</div>

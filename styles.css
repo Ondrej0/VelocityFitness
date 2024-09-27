@@ -1,0 +1,928 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background-color: #2C2C2C;
+  box-sizing: border-box;
+}
+
+/*Header and navingation bar */
+
+nav {
+  background-color: #FFC107;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 80px;
+  font-size: 20px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #2C2C2C;
+  transition: 0.5s;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo media settings */
+
+@media (min-width: 500px) {
+  .smallLogo {
+    margin-right: auto;
+    font-weight: 800;
+    font-size: 35px;
+    height: 100%;
+    padding: 20px 50px;
+    margin-left: 70px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #2C2C2C;
+    letter-spacing: -2px;
+  }
+}
+
+@media (max-width: 500px) {
+  .smallLogo {
+    margin-right: auto;
+    font-weight: bold;
+    font-size: 15px;
+    height: 100%;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #2C2C2C;
+    margin-left: 0px;
+    letter-spacing: 0;
+  }
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Side bar */
+.sidebar li:first-child {
+  height: 10%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.541);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1340px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button {
+    display: block;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Hero Section -------------------------------------------------------------------------------------*/
+
+.heroDiv {
+  width: 100%;
+  height: clamp(600px, 80vw, 900px);
+  background-image: url("images/pic2.jpg"); /* Corrected path */
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.heroDiv h1 {
+  color: white;
+  font-size: clamp(30px, 5vw, 90px);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.heroDiv h1 span{
+  font-weight: 100;
+  transform: translateY(-1000px);
+}
+
+.heroDiv p {
+  color: white;
+  font-size: clamp(15px, 2vw, 20px);
+  text-align: center;
+  font-weight: 100;
+  width: 60%;
+}
+
+.heroDiv button {
+  font-size: clamp(15px, 1vw, 50px);
+  width: clamp(150px, 10vw, 300px);
+  padding: 10px;
+  color: #2C2C2C;
+  background-color: #FFC107;
+  border: 0cap;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.heroDiv button:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.heroDiv h5{
+  color: #FFC107;
+  font-weight: 300;
+  transform: translateY(20px);
+}
+
+/* Classes Section --------------------------------------------------------------------*/
+
+.classMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  margin-top: 60px;
+}
+
+/* Classes Headings*/
+#classHeads {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#classHeads h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: clamp(30px, 2.5vw, 80px);
+}
+
+#classHeads h3 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #D9D9D9;
+  font-size: clamp(20px, 1vw, 50px);
+  letter-spacing: 3px;
+}
+
+/* Classes Pictures */
+
+#classPics {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+#classPics .classContainer{
+  width: clamp(300px, 25%, 400px);
+  height: clamp(150px, 90vw, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+.classTopCard{
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 40%;
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.classBottomCard{
+  width: 100%;
+  height: 60%;
+  background-color: #FFC107;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+
+#classPics .classTopText {
+  color: white;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2vw, 50px);
+}
+
+#classPics .classBottomText {
+  text-align: center;
+  font-size: clamp(12px, 1vw, 18px);
+  color: #2C2C2C;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-shadow: none;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.classButton {
+  font-size: clamp(15px, 1vw, 50px);
+  width: clamp(150px, 8vw, 300px);
+  padding: 10px;
+  color: #FFC107;
+  background-color: #2C2C2C;
+  border: 2px solid transparent; /* Define initial border style */
+  border-radius: 20px;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s; /* Specify transition properties */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  justify-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.classButton:hover {
+  background-color: #FFC107;
+  color: #292929;
+  border-color: #292929; /* Define border color on hover */
+  cursor: pointer;
+}
+
+
+#martialArtsClass {
+  background-image: url("images/pexels-glebkrs-2628210.jpg");
+}
+
+#fitnessClass {
+  background-image: url("images/fitness.jpg");
+}
+
+#flexibleClass{
+  background-image: url("images/flexibility.jpg");
+}
+
+/* Trainer Section --------------------------------------------------------------------*/
+
+.trainerMain {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  margin-top: 60px;
+}
+
+/* Classes Headings*/
+#trainerHeads {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#trainerHeads h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: white;
+  font-size: clamp(30px, 2.5vw, 80px);
+}
+
+#trainerHeads h3 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #D9D9D9;
+  font-size: clamp(20px, 1vw, 50px);
+  letter-spacing: 3px;
+}
+
+/* Classes Pictures */
+
+#trainerPics {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+#trainerPics .trainerContainer{
+  width: clamp(300px, 25%, 400px);
+  height: clamp(150px, 90vw, 600px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+.trainerTopCard{
+  width: 100%;
+  border-radius: 20px 20px 0px 0px;
+  height: 40%;
+  background-size: cover; /* Ensures the image covers the entire div */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat;
+  overflow: hidden; /* Ensures the pseudo-element doesn't overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.trainerBottomCard{
+  width: 100%;
+  height: 60%;
+  background-color: #FFC107;
+  border-radius: 0px 0px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1vw;
+}
+
+
+#trainerPics  .trainerTopText {
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2vw, 50px);
+  margin-top: 20px;
+}
+
+#trainerPics  .trainerBottomText {
+  text-align: center;
+  font-size: clamp(12px, 1vw, 30px);
+  color: #2C2C2C;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-shadow: none;
+  width: 80%;
+}
+
+.trainerButton {
+  font-size: clamp(15px, 1vw, 50px);
+  width: clamp(150px, 8vw, 300px);
+  padding: 10px;
+  color: #FFC107;
+  background-color: #2C2C2C;
+  border: 2px solid transparent; /* Define initial border style */
+  border-radius: 20px;
+  transition: background-color 0.5s, color 0.5s, border-color 0.5s; /* Specify transition properties */
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  justify-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.trainerButton:hover {
+  background-color: #FFC107;
+  color: #292929;
+  border-color: #292929; /* Define border color on hover */
+  cursor: pointer;
+}
+
+#JordanLee {
+  background-image: url("images/jordan\ lee.jpg");
+}
+
+#AlexCarter {
+  background-image: url("images/alexcarter.jpg");
+}
+
+#RileyMorgan{
+  background-image: url("images/riley\ morgan.png");
+}
+
+/* Testimonials Section -------------------------------------------------------------------------------------*/
+
+#testHeading {
+  width: 100%;
+  height: clamp(100px, 10vw, 200px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tesMainHead {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: clamp(30px, 2.5vw, 80px);
+}
+
+#testSubHead {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #D9D9D9;
+  font-size: clamp(20px, 1vw, 50px);
+  letter-spacing: 3px;
+}
+
+/*Testimonial Slider*/
+
+#testBig {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2C2C2C;
+}
+
+.testimonial {
+  max-width: 900px;
+  width: 100%;
+  padding: 0;
+
+  background-color: #2C2C2C;
+}
+
+.testimonial .image {
+  height: clamp(100px, 10vw, 150px);
+  width: clamp(100px, 10vw, 150px);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.testimonial .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.slide p {
+  padding: 0 100px;
+  text-align: center;
+  font-size: clamp(10px, 3vw, 20px);
+  font-weight: 200;
+  color: #ffffff;
+}
+
+.slide .details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details .name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.details .job {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.sliderButton {
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 900;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+.sliderButton:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+  border-color: white;
+}
+
+.tes2 {
+  display: none;
+}
+
+.tes3 {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 570px) {
+  .container {
+    margin-top: 120px;
+  }
+}
+
+/* Free Day Pass Section -------------------------------------------------------------------------------------*/
+
+#freeDayCard {
+  padding: 20px 0px;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFC107;
+  gap: clamp(50px, 5vw, 60px);
+}
+
+#freeDayCard h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: clamp(30px, 3vw, 120px);
+}
+
+#freeDayCard h2 i {
+  font-weight: 300;
+}
+
+#freeDayCard p {
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+#freeDayCard button {
+  background-color: #292929;
+  color: #FFC107;
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 20px;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+#freeDayCard button:hover {
+
+  color: #292929;
+  background-color: #FFC107;
+  border: 2px solid #292929;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #freeDayCard p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  #freeDayCard {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  #freeDayCard {
+    margin-top: 180px;
+  }
+  .testimonial {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  #freeDayCard {
+    margin-top: 250px;
+  }
+  #freeDayCard h2 {
+    margin-bottom: -50px;
+  }
+  #freeDayCard p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+/* Membership Section -------------------------------------------------------------------------------------*/
+
+#memberShipSec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5vh;
+  padding: 50px 0;
+}
+
+.memberHead {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.memberMainHead {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: clamp(30px, 2.5vw, 80px);
+}
+
+.memberSub {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #d9d9d9;
+  font-size: clamp(20px, 1vw, 50px);
+  letter-spacing: 3px;
+}
+
+/* Membership Cards ------------------*/
+
+#memberShipSec .memberContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7vw;
+}
+
+.memberCard{
+  width: clamp(300px, 17%, 400px);
+  height: clamp(150px, 90vw, 500px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #101010;
+  border-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Slight shadow at the bottom */
+                0 6px 20px rgba(0, 0, 0, 0.1); /* More pronounced shadow further out */
+  transition: 0.3s;
+}
+
+.memberCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), /* Enhance shadow on hover */
+              0 12px 40px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+
+#memberShipSec .memberName{
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 1.5vw, 50px);
+  text-justify: center;
+}
+
+
+
+.memberBenefits{
+  font-size: clamp(12px, 1vw, 20px);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  width: 70%;
+}
+
+.memberPPY{
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: #d9d9d9;
+  font-size: clamp(15px, 1vw, 18px);
+}
+
+.meberPrice{
+  color: #ffffff;
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2vw, 50px);
+  text-justify: center;
+}
+
+#premiumMember{
+  margin-bottom: 90px;
+}
+
+
+.priceContainer{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.joinButton {
+  font-size: clamp(15px, 1vw, 50px);
+  width: clamp(150px, 10vw, 300px);
+  padding: 10px;
+  color: #2C2C2C;
+  background-color: #FFC107;
+  border: 0cap;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.joinButton:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 1045px) {
+  #premiumMember{
+    margin-bottom: 0;
+  }
+}
+
+
+/* Contact Section -------------------------------------------------------------------------------------*/
+
+#contactUs {
+  padding: 20px 0px;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFC107;
+  gap: clamp(50px, 5vw, 60px);
+}
+
+#contactUs h2 {
+  width: 100%;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: black;
+  font-size: clamp(30px, 3vw, 120px);
+}
+
+#contactUs h2 i {
+  font-weight: 300;
+}
+
+#contactUs p {
+  width: 50%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+#contactUs button {
+  background-color: #292929;
+  color: #FFC107;
+  padding: 20px 30px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 20px;
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+#contactUs button:hover {
+
+  color: #292929;
+  background-color: #FFC107;
+  border: 2px solid #292929;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  #contactUs p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  #contactUs{
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  #contactUs {
+    margin-top: 180px;
+  }
+}
+
+@media (max-width: 500px) {
+  #contactUs {
+    margin-top: 250px;
+  }
+  #contactUs h2 {
+    margin-bottom: -50px;
+  }
+  #contactUs p {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
